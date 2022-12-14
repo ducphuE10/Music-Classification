@@ -1,4 +1,6 @@
-/data
-/data_infer/*mp3
-/data_infer/segment/*wav
+data
+data_infer/*mp3
+data_infer/segment/*wav
 model_mlp1.pth
+__pycache__
+config/__pycache__

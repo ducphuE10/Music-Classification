@@ -8,8 +8,10 @@ Install requirements:
 
 To infer:
 
-    !python3 inference.py "id-of-youtube-clips"
+    !python3 inference.py "id-of-youtube-clip"
 
 Example: 
 - Video link is: https://www.youtube.com/watch?v=GxrovKtl15E
-- Command: !python3 inference.py GxrovKtl15E
+- Command: 
+
+    !python3 inference.py GxrovKtl15E

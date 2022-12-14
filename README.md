@@ -6,6 +6,7 @@ Download pretrain model and put it into project's folder: https://drive.google.c
 !pip install -r requirements.txt
 
 To infer:
+
 !python3 inference.py "id-of-youtube-clips"
 
 Example: 

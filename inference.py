@@ -25,6 +25,11 @@ if __name__ == '__main__':
     parser.add_argument('--fast_predict',type = bool, default=False)
     args = parser.parse_args()
 
+    if not os.path.exists('data_infer'):
+      os.makedirs('data_infer')
+    if not os.path.exists('data_infer/segment/'):
+      os.makedirs('data_infer/segment/')
+
     files = glob.glob('data_infer/*mp3')
     for f in files:
         os.remove(f)

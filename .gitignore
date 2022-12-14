@@ -1,1 +1,4 @@
-/dataset
+/data
+/data_infer/*mp3
+/data_infer/segment/*wav
+model_mlp1.pth

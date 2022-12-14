@@ -3,6 +3,8 @@ import os
 import soundfile as sf
 import librosa
 from config.cofig import *
+import threading
+from glob import glob
 
 def segmentize_signal(signal, sr, dur):
     """
@@ -18,7 +20,7 @@ def segmentize_signal(signal, sr, dur):
     trunc_len = int(no_segs * seg_len)
 
     # split equally
-    return np.split(signal[:trunc_len], no_segs)
+    return np.split(signal[:trunc_len], no_segs)[3:]
 
 def save_audio(signal, sr, output_dir, filename):
     output_path = os.path.join(output_dir, filename)
@@ -40,3 +42,14 @@ def segment_audio_file(audio_path, output_dir,  target_sr=TARGET_SR, segment_dur
 
 # segment_audio_file('dataset/raw/f1IISFFTqRc.mp3','dataset/segment/lofi')
 
+# if __name__ == '__main__':
+#     thread_list = []
+#     for cls in ['remix']:
+#     # get all raw files from subfolders
+#         raw_audio_paths = glob(f"{RAW_CLIP_PATH}{cls}/*mp3")
+#         for audio_path in raw_audio_paths:
+#             output_dir = f"{SEGMENT_DIR}{cls}"
+#             segment_audio_file(audio_path, output_dir)
+
+        # print(cls)
+        # print(len(glob(f"{SEGMENT_DIR}{cls}/*wav")))
